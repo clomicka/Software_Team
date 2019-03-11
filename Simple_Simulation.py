@@ -1,6 +1,8 @@
 #Trying to control a plane and stuff / Mission Planner
 import sys
-sys.path.append(r"c:\python27\lib")
+sys.path.append(r"C:\Python27\Lib")
+sys.path.append(r"C:\Python27\Lib\site-packages")
+import serial, os, threading
 import math
 import clr
 import time
@@ -22,8 +24,8 @@ def distance(lat1, lon1, lat2, lon2):
     dLat = lat2 - lat1
     dLon = lon2 - lon1
 
-    a = sin(0.5*dLat)**2 + sin(0.5*dLon)**2 cos(lat1) * cos(lat2)
-    c = 2 * atan2(sqrt(a), sqrt(1 - a))
+    a = math.sin(0.5*dLat)**2 + math.sin(0.5*dLon)**2 math.cos(lat1) * math.cos(lat2)
+    c = 2 * math.atan2(sqrt(a), math.sqrt(1 - a))
     return r_e * c
 
 
